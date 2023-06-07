@@ -1,10 +1,12 @@
 package lesson05.Problem02;
 
+import java.time.LocalDate;
+
 public class Secretary extends DeptEmployee {
     private double overtimeHours;
 
-    Secretary(String name, double salary, int year, int month, int dayOfMonth, double overtimeHours) {
-        super(name, salary, year, month, dayOfMonth);
+    Secretary(String name, double salary, LocalDate hireDate, double overtimeHours) {
+        super(name, salary, hireDate);
         this.overtimeHours = overtimeHours;
     }
 

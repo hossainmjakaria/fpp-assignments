@@ -7,10 +7,10 @@ public class DeptEmployee {
     private LocalDate hireDate;
     private double salary;
 
-    DeptEmployee(String name, double salary, int year, int month, int dayOfMonth){
+    DeptEmployee(String name, double salary, LocalDate hireDate) {
         this.name = name;
         this.salary = salary;
-        this.hireDate = LocalDate.of(year, month, dayOfMonth);
+        this.hireDate = hireDate;
     }
 
     public String getName() {
@@ -29,7 +29,7 @@ public class DeptEmployee {
         this.hireDate = LocalDate.of(year, month, dayOfMonth);
     }
 
-    public double computeSalary(){
+    public double computeSalary() {
         return salary;
     }
 }

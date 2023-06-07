@@ -1,14 +1,15 @@
 package lesson05.Problem02;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Professor professor1 = new Professor("Professor1", 14000, 2001, 1, 1, 35);
-        Professor professor2 = new Professor("Professor2", 15000, 2000, 10, 1, 56);
-        Professor professor3 = new Professor("Professor3", 10000, 2015, 6, 15, 20);
-        Secretary secretary1 = new Secretary("Secretary1", 20000, 2000, 6, 15, 5);
-        Secretary secretary2 = new Secretary("Secretary2", 19000, 1999, 8, 20, 3);
+        Professor professor1 = new Professor("Professor1", 14000, LocalDate.of(2001, 1, 1), 35);
+        Professor professor2 = new Professor("Professor2", 15000, LocalDate.of(2000, 10, 1), 56);
+        Professor professor3 = new Professor("Professor3", 10000, LocalDate.of(2015, 6, 15), 20);
+        Secretary secretary1 = new Secretary("Secretary1", 20000, LocalDate.of(2000, 6, 15), 5);
+        Secretary secretary2 = new Secretary("Secretary2", 19000, LocalDate.of(1999, 8, 20), 3);
 
 
         DeptEmployee[] department = new DeptEmployee[5];
@@ -28,7 +29,7 @@ public class Main {
             if (choice.equals("Y")) {
                 double totalSalary = 0;
                 for (DeptEmployee emp : department) {
-                    totalSalary+= emp.computeSalary();
+                    totalSalary += emp.computeSalary();
                 }
                 System.out.println(totalSalary);
             } else {

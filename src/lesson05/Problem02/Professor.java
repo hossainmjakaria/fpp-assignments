@@ -1,10 +1,12 @@
 package lesson05.Problem02;
 
+import java.time.LocalDate;
+
 public class Professor extends DeptEmployee {
     private int numberOfPublications;
 
-    Professor(String name, double salary, int year, int month, int dayOfMonth, int numberOfPublications) {
-        super(name, salary, year, month, dayOfMonth);
+    Professor(String name, double salary, LocalDate hireDate, int numberOfPublications) {
+        super(name, salary, hireDate);
         this.numberOfPublications = numberOfPublications;
     }
 
