@@ -23,7 +23,10 @@ public class Computer {
 
         Computer other = (Computer) otherObject;
 
-        return manufacturer.equals(other.manufacturer) && processor.equals(other.processor) && ramSize == other.ramSize && processorSpeed == other.processorSpeed;
+        return manufacturer.equals(other.manufacturer)
+                && processor.equals(other.processor)
+                && ramSize == other.ramSize
+                && processorSpeed == other.processorSpeed;
     }
 
 
@@ -34,6 +37,10 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer [" + "Manufacturer: " + manufacturer + ", Processor: " + processor + ", Ram Size:" + ramSize + ", Processor Speed:" + processorSpeed + "]";
+        return "Computer [" + "Manufacturer: " + manufacturer
+                + ", Processor: " + processor
+                + ", Ram Size: " + ramSize
+                + ", Processor Speed: "
+                + processorSpeed + "]";
     }
 }
