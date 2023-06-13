@@ -2,12 +2,12 @@ package lesson08.problem01;
 
 import java.util.Arrays;
 
-public class MyEmployeeList {
+public class MyPersonList {
     private final int INITIAL_LENGTH = 4;
     private Person[] people;
     private int size;
 
-    MyEmployeeList() {
+    MyPersonList() {
         people = new Person[INITIAL_LENGTH];
         size = 0;
     }
@@ -91,21 +91,23 @@ public class MyEmployeeList {
     }
 
     public static void main(String[] args) {
-        MyEmployeeList l = new MyEmployeeList();
-        l.add(new Person("Bob", "Elmar", 65));
-        l.add(new Person("Steve", "Waugh", 53));
-        l.add(new Person("Susan", "Sack", 25));
-        l.add(new Person("Mark", "Waugh", 34));
-        l.add(new Person("Joe", "Battler", 28));
+        MyPersonList people = new MyPersonList();
+        people.add(new Person("Bob", "Elmar", 65));
+        people.add(new Person("Steve", "Waugh", 53));
+        people.add(new Person("Susan", "Sack", 25));
+        people.add(new Person("Mark", "Waugh", 34));
+        people.add(new Person("Joe", "Battler", 28));
 
-        System.out.println("Number of employees: " + l.size);
+        System.out.println("Number of people: " + people.size);
+        System.out.println(people);
 
-        l.insert(new Person("Mark", "Wood", 35), 2);
+        System.out.println("After inserting another person: ");
+        people.insert(new Person("Mark", "Wood", 35), 2);
+        System.out.println(people);
 
-
-        System.out.println(l);
-        l.remove(new Person("Susan", "Sack", 25));
-        l.remove(new Person("Mark", "Waugh", 34));
-        System.out.println(l);
+        System.out.println("After removing persons: ");
+        people.remove(new Person("Susan", "Sack", 25));
+        people.remove(new Person("Mark", "Waugh", 34));
+        System.out.println(people);
     }
 }
