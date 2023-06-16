@@ -52,6 +52,6 @@ public class Marketing {
 
     @Override
     public int hashCode() {
-        return Objects.hash(employeeName, productName, salesAmount);
+        return Objects.hash(salesAmount);
     }
 }
