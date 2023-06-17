@@ -16,13 +16,10 @@ public class Main {
                 throw new UnsupportedOperationException("The inputs not in the range of 0-100");
             }
         } catch (InputMismatchException ex) {
-            String message = ex.getMessage();
-            System.out.println(message);
             throw new InputMismatchException("The wrong entry of data instead of int value.");
         } catch (UnsupportedOperationException ex) {
-            String message = ex.getMessage();
-            System.out.println(message);
-            throw new UnsupportedOperationException(message);
+            System.out.println(ex.getMessage());
+            throw new UnsupportedOperationException(ex.getMessage());
         }
 
         System.out.println("Your number is valid.");
