@@ -11,7 +11,7 @@ public class CustomerAccount {
         this.balance = balance;
     }
 
-    public boolean deposit(double amount) throws InsufficientBalanceException {
+    public boolean deposit(double amount) {
         if (amount < 0) return false;
         balance += amount;
         return true;
